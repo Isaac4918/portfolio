@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>About Me - Tokyo Night Style</title>
+  <style>
+    /* Tokyo Night inspired palette */
+    :root {
+      --bg-color: #1a1b26; /* fondo oscuro */
+      --card-bg: #24283b; /* carta gris azulada */
+      --accent-cyan: #7dcfff;
+      --accent-purple: #bb9af7;
+      --text-primary: #c0caf5;
+      --text-secondary: #a9b1d6;
+      --shadow-color: rgba(125, 207, 255, 0.3);
+      --border-radius: 16px;
+      --font-family-title: 'Impact', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      --font-family-text: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      --transition-speed: 0.3s;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: var(--bg-color);
+      font-family: var(--font-family-text);
+      color: var(--text-primary);
+      padding: 1rem;
+    }
+
+    .about-card {
+      background-color: var(--card-bg);
+      width: 100%;
+      max-width: 420px;
+      border-radius: var(--border-radius);
+      padding: 2.5rem 2rem;
+      box-shadow: 0 8px 24px var(--shadow-color);
+      text-align: center;
+      transition: box-shadow var(--transition-speed);
+    }
+
+    .about-card:hover {
+      box-shadow: 0 12px 32px var(--accent-cyan);
+    }
+
+    .about-card h1 {
+      font-family: var(--font-family-title);
+      font-size: 3rem;
+      margin: 0 0 1rem 0;
+      color: var(--accent-purple);
+      letter-spacing: 4px;
+      text-transform: uppercase;
+      user-select: none;
+    }
+
+    .profile-pic {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      border: 4px solid var(--accent-cyan);
+      object-fit: cover;
+      box-shadow: 0 4px 15px var(--accent-cyan);
+      transition: transform var(--transition-speed);
+      margin-bottom: 1.5rem;
+      cursor: default;
+    }
+
+    .profile-pic:hover {
+      transform: scale(1.1) rotate(3deg);
+    }
+
+    .about-text {
+      font-size: 1.15rem;
+      line-height: 1.6;
+      color: var(--text-secondary);
+      margin-bottom: 1rem;
+      user-select: text;
+    }
+
+    .about-text:last-child {
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 480px) {
+      .about-card {
+        padding: 1.5rem 1rem;
+        max-width: 320px;
+      }
+
+      .about-card h1 {
+        font-size: 2.5rem;
+        letter-spacing: 3px;
+      }
+
+      .profile-pic {
+        width: 130px;
+        height: 130px;
+        border-width: 3px;
+        margin-bottom: 1rem;
+      }
+
+      .about-text {
+        font-size: 1rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <section class="about-card" aria-label="About Me Section">
+    <h1>About Me</h1>
+    <img src="./images/profilepic.jpeg" alt="Isaac Araya Solano profile picture" class="profile-pic" />
+    <p class="about-text">
+      My name is Isaac Araya Solano, I am a student at the ITCR. I am currently studying Computer Engineering.
+      I am passionate about technology and I am always looking for new challenges to improve my skills.
+    </p>
+    <p class="about-text">
+      I am 25 years old and I live in Cartago, Costa Rica.
+    </p>
+  </section>
+</body>
+
+</html>
